@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Http\Resources;
-
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -19,8 +17,8 @@ class Ride extends JsonResource
     public function toArray($request)
     {
         return [
-            'scooter_id'       => $this->scooter_id,
-            'date'     => $this->created_at
+            'scooter_id' => $this->scooter_id,
+            'date'       => $this->created_at,
         ];
     }
 }

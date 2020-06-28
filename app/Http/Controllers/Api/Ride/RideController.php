@@ -11,7 +11,6 @@ use Illuminate\Http\JsonResponse;
 
 class RideController extends BaseController
 {
-
     private $rideRepository;
 
     public function __construct(RideRepository $rideRepository)
@@ -21,13 +20,12 @@ class RideController extends BaseController
 
     /**
      * @param RideIndexRequest $rideIndexRequest
+     *
      * @return JsonResponse
      */
     public function index(RideIndexRequest $rideIndexRequest)
     {
-
         try {
-
             /** @var Collection $rides */
             $rides = $this->rideRepository->findAll();
 
@@ -35,6 +33,5 @@ class RideController extends BaseController
         } catch (Exception $controllerException) {
             return $this->sendError(trans($controllerException->getMessage()), $controllerException->getCode());
         }
-
     }
 }

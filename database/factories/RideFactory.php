@@ -3,10 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Entities\Ride;
-use App\Entities\Scooter;
-use App\User;
 use Faker\Generator as Faker;
-use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +18,6 @@ use Illuminate\Support\Str;
 
 $factory->define(Ride::class, function (Faker $faker) {
     return [
-        'scooter_id'=> $faker->numberBetween()->unique()
+        'scooter_id' => $faker->numberBetween(1, 1000),
     ];
 });

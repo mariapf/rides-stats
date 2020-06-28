@@ -3,8 +3,8 @@
 namespace Tests\Feature;
 
 use App\Entities\Ride;
-use Illuminate\Http\Response;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Http\Response;
 use Tests\TestCase;
 
 /**
@@ -27,7 +27,8 @@ class RidesIndexTest extends TestCase
         //Then
         $response->assertStatus(Response::HTTP_OK)
             ->assertJsonFragment([
-                'scooter_id' => $ride->scooter_id
-            ]);
+                'scooter_id' => (string) $ride->scooter_id,
+            ])
+        ;
     }
 }

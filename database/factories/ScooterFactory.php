@@ -3,9 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Entities\Scooter;
-use App\User;
 use Faker\Generator as Faker;
-use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,11 +18,11 @@ use Illuminate\Support\Str;
 
 $factory->define(Scooter::class, function (Faker $faker) {
     return [
-        'id'=> $faker->numberBetween()->unique(),
-        'name'              => $faker->name,
-        'lat'             => $faker->latitude,
-        'lng' => $faker->longitude,
-        'battery' => $faker->$faker->numberBetween(1, 100),
-        'type'          => $faker->$faker->numberBetween(1, 10)
+        'id'      => $faker->numberBetween(1, 1000),
+        'name'    => $faker->name,
+        'lat'     => $faker->latitude,
+        'lng'     => $faker->longitude,
+        'battery' => $faker->numberBetween(1, 100),
+        'type'    => $faker->numberBetween(1, 10),
     ];
 });
