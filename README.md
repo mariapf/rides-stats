@@ -2,6 +2,7 @@
 ## Rides Stats
 
 Test Application built in Laravel 7
+Retrieves a list of scooters every minute through a command and stores eqch ride when comparing responses.
 
 ## Create local dev enviroment
 
