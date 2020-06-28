@@ -23,6 +23,11 @@ Update hosts file `/etc/hosts` using data from `./Homestead.yaml` for example.:
 192.168.10.50 rides.test
 ```
 
+Set Up Cron Jobs
+```
+* * * * * cd /path-to-your-project/rides-stats && php artisan schedule:run >> /dev/null 2>&1
+```
+
 ## Enable database connection outside the box 
 Check the pgsql version running
 ```bash
